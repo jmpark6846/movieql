@@ -1,0 +1,9 @@
+type Person{
+    name: String!
+    gender: String!
+    age: Int!
+}
+
+type Query{
+    park: Person!
+}
