@@ -1,13 +1,9 @@
-const park = {
-    name: "joonmo",
-    gender: "male",
-    age: 29
-}
+import { getMovies } from "./db";
 
 const resolvers = {
-    Query: {
-        park: () => park
-    }
-}
+  Query: {
+    movies: (_, { limit, rating }) => getMovies(limit, rating)
+  }
+};
 
-export default resolvers
+export default resolvers;

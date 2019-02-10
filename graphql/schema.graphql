@@ -1,9 +1,11 @@
-type Person{
-    name: String!
-    gender: String!
-    age: Int!
+type Movie{
+    id: Int!
+    title: String!
+    rating: Float!
+    genres: [String]!
+    medium_cover_image: String!
 }
 
 type Query{
-    park: Person!
-}
+    movies(limit: Int!, rating: Int!): [Movie]!
+} 
